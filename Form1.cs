@@ -13,14 +13,15 @@ namespace brazoRobot
     public partial class Form1 : Form
     {
         System.IO.Ports.SerialPort Arduino;
-        string rotarBaseIzquierda = "";
-        string rotarBaseDerecha = "";
-        string rotarHombroArriba = "";
-        string rotarHombroAbajo = "";
-        string rotarCodoArriba = "";
-        string rotarCodoAbajo = "";
-        string rotarManoAbrir = "";
-        string rotarManoCerrar = "";
+        string rotarBaseIzquierda = "a";
+        string rotarBaseDerecha = "b";
+        string rotarHombroAdelante = "c";
+        string rotarHombroAtras = "d";
+        string rotarCodoArriba = "e";
+        string rotarCodoAbajo = "f";
+        string rotarManoAbrir = "g";
+        string rotarManoCerrar = "h";
+        string reset = "z";
         public Form1()
         {
             InitializeComponent();
@@ -48,12 +49,12 @@ namespace brazoRobot
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Arduino.WriteLine(rotarHombroArriba);
+            Arduino.WriteLine(rotarHombroAdelante);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Arduino.WriteLine(rotarHombroAbajo);
+            Arduino.WriteLine(rotarHombroAtras);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -68,12 +69,22 @@ namespace brazoRobot
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Arduino.WriteLine(rotarManoAbrir);
+            Arduino.WriteLine(rotarManoCerrar);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Arduino.WriteLine(rotarManoCerrar);
+            Arduino.WriteLine(rotarManoAbrir);
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Arduino.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Arduino.WriteLine(reset);
         }
     }
 }

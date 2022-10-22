@@ -112,5 +112,29 @@
   <ItemGroup>
     <None Include="Imagenes\unlocked.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\arrow-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\arrow-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\arrow-up2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\arrow-down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\unlocked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\PNG\lock.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
